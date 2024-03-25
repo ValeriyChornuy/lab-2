@@ -12,7 +12,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: SetupSSH and deploy
+      - name: Setup SSH and deploy
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
@@ -20,5 +20,5 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             echo "Connecting to server..."
-            ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'rm -rf /home/valerachornuy/htdocs && mkdir -p /home/valerachornuy/htdocs && git clone https://github.com/ValeriyChornuy/lab-2' || (echo "Failed to clone repository"; exit 1)
-            echo "Repository cloned successfully"
+            ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} 'cd /path/to/your/project && git pull'
+            echo "Project updated successfully"
