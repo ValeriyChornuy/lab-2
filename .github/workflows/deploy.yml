@@ -16,7 +16,7 @@ jobs:
           passphrase: ${{ secrets.SERVER_PASSPHRASE }}
      
           script: |
-            mkdir experiments
-            cd experiments
-            git clone https://github.com/olehpitsun/Pytorch-UNet.git
+            mkdir Chornuy
+            cd Chornuy
+            git clone https://github.com/ValeriyChornuy/lab-2.git
             echo 'Deployment successful to digitsal ocean' 
