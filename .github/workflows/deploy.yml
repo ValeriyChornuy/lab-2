@@ -18,6 +18,6 @@ jobs:
           script: |
             mkdir Chornuy
             cd Chornuy
-            touch name Deploy.txt
+            touch Контакти.html
             git clone https://github.com/ValeriyChornuy/lab-2.git
             echo 'Deployment successful to DigitalOcean'
